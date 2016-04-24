@@ -46,19 +46,19 @@ Styled for used in a menu-bar-style menu, with optional  checkmark or other icon
 
 ```hbs
 {{#paper-menu position="target bottom" width=2 dense=true as |menu|}}
-  {{#paper-button target=menu action="toggleMenu" icon-button=true}}
+  {{#paper-button  onClick=(action "toggleMenu" target=menu) icon-button=true}}
     {{paper-icon "create" class="md-menu-origin"}}
   {{/paper-button}}
 {{else}}
   {{#paper-dropdown-menu-item
-        action=(action "toggleDone")
+        onClick=(action "toggleDone")
         checked=isDone
         disabled=isntSelected
         shortcut="Ctrl+Alt+V"}}
     Mark as done
   {{/paper-dropdown-menu-item}}
   {{#paper-dropdown-menu-item
-        action=(action "togglePageBreak")
+        onClick=(action "togglePageBreak")
         checked=isPageBreak
         disabled=isntSelected
         shortcut="Ctrl+Alt+P"}}

@@ -1,5 +1,5 @@
 {{#if onClick}}
-  {{#paper-button no-span=true action=onClick disabled=disabled}}
+  {{#paper-button onClick="handleClick" disabled=disabled}}
     {{#if checked}}{{paper-icon checkIcon class="md-menu-checkmark"}}{{/if}}
     <p class="md-menu-command">{{yield}}</p>
     {{#if hasShortcut}}<div class="md-menu-shortcut">{{shortcut}}</div>{{/if}}
